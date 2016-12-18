@@ -4,9 +4,9 @@ cls
 echo OldSNES -- SNES VC for Old 3DS users
 echo Currently using: BlargSNES
 set /p "title=Game Title: "
-if not exist "input\%title%\*.smc" if not exist "input\%title%\*.sfc" (
+if not exist "input\%title%\rom.smc" if not exist "input\%title%\rom.sfc" (
     echo ERROR: Missing rom file.
-    echo Make sure you have a rom file in input\%title% folder.
+    echo Make sure you have a rom.smc/sfc in input\%title% folder.
     pause
     exit
 )
@@ -19,9 +19,9 @@ if not exist "output\%title%" mkdir "output\%title%"
 if not exist romfs mkdir romfs
 del /f /q romfs
 if exist "input\%title%\*.smc" (
-    copy /b "input\%title%\*.smc" romfs\rom.smc >NUL 2>NUL
+    copy /b "input\%title%\rom.smc" romfs\rom.smc >NUL 2>NUL
 ) else (
-    copy /b "input\%title%\*.sfc" romfs\rom.smc >NUL 2>NUL
+    copy /b "input\%title%\rom.sfc" romfs\rom.smc >NUL 2>NUL
 )
 if exist "input\%title%\*.bmp" copy /b "input\%title%\*.bmp" romfs\blargSnesBorder.bmp >NUL 2>NUL
 if exist "input\%title%\*.ini" copy /b "input\%title%\*.ini" romfs\blargSnes.ini >NUL 2>NUL

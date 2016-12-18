@@ -6,7 +6,7 @@ echo Currently using: Snes9x for 3DS
 set /p "title=Game Title: "
 if not exist "input\%title%\rom.smc" if not exist "input\%title%\rom.sfc" (
     echo ERROR: Missing rom file.
-    echo Make sure you have a rom file in input\%title% folder.
+    echo Make sure you have a rom.smc/sfc in input\%title% folder.
     pause
     exit
 )
