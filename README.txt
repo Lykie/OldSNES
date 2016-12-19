@@ -34,6 +34,7 @@ Note: You need to use the "borders" config template if using custom borders.
 
 IMPORTANT:
 This seems to only work with unheadered roms
+Banner creation is broken but I am slowly trying to fix it.
 
 Credits:
 - StapleButter and DiscostewSM for blargSNES.
