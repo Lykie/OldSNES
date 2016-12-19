@@ -7,3 +7,5 @@ output
 romfs
 tools
 *.cia
+*.smc
+*.sfc
